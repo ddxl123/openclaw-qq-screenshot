@@ -23,13 +23,13 @@ Capture the Mac screen, compress to ~1MB, and deliver via QQ bot media.
 
 ## Cleanup
 
-After sending the screenshot via `<qqmedia>`, **immediately delete the file** to free disk space:
+After sending the screenshot via `<qqmedia>`, **do NOT delete the file immediately**. Wait for the user to confirm they received the screenshot (e.g. "收到", "ok", "好了"), then delete:
 
 ```bash
 rm -f ~/.openclaw/media/qqbot/screenshot.jpg
 ```
 
-This prevents stale screenshots from accumulating in the media directory.
+This ensures the file isn't removed before QQ finishes delivering it.
 
 ## Notes
 
