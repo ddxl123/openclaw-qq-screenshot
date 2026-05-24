@@ -21,6 +21,16 @@ Capture the Mac screen, compress to ~1MB, and deliver via QQ bot media.
    ```
    Replace `<user>` with the actual macOS username (use `$HOME` or `whoami`).
 
+## Cleanup
+
+After sending the screenshot via `<qqmedia>`, **immediately delete the file** to free disk space:
+
+```bash
+rm -f ~/.openclaw/media/qqbot/screenshot.jpg
+```
+
+This prevents stale screenshots from accumulating in the media directory.
+
 ## Notes
 
 - Script uses `screencapture -x` (no sound, captures all displays).
